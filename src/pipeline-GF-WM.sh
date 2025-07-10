@@ -49,9 +49,12 @@ src_dir=$(dirname "${BASH_SOURCE[0]}")
 sed -e "s:SUBJDIR:${feat_dir}:g" "${src_dir}"/design-template-GF-WM.fsf > "${feat_dir}"/design.fsf
 
 # Verify that TR, nvols in design file match the fmri nifti
+echo Checking design file params
 check-tr-vols.py --design_fsf "${feat_dir}"/design.fsf
 
 # Run the fmri
+echo Running FEAT
 cd "${feat_dir}"
 feat design.fsf
+
 

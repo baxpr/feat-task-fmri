@@ -40,7 +40,6 @@ if npts != npts:
 if fmri_niigz == '':
     raise Exception(f'No feat_files found in {args.design_fsf}')
 
-print(fmri_niigz)
 fmri_img = nibabel.load(fmri_niigz)
 nii_tr = fmri_img.header['pixdim'][4]
 nii_npts = fmri_img.header['dim'][4]
