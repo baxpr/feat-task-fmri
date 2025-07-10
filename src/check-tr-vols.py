@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # Verify that a design.fsf file has the correct TR and nvols matching
 # the nifti file

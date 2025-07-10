@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # Get WM task timings from eprime csv created by eprime_to_csv.py
 

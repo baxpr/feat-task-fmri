@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # Basic waveform shape (EV 1)
 # 0 : Square

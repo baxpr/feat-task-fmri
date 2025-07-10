@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # Extract motion params from fmriprep confounds file and save in FEAT format
 
