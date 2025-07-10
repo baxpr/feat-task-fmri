@@ -439,10 +439,11 @@ set fmri(con_mode) orig
 set fmri(ncon_orig) 0
 set fmri(ncon_real) 5
 
+# 1     2     3      4      5     6     7      8
 # 0body 0face 0place 0tools 2body 2face 2place 2tools
 
 set fmri(conpic_real.1) 1
-set fmri(conname_real.1) "2gt0"
+set fmri(conname_real.1) "2back gt 0back"
 set fmri(con_real1.1) -.25
 set fmri(con_real1.2) -.25
 set fmri(con_real1.3) -.25
@@ -453,7 +454,7 @@ set fmri(con_real1.7) 0.25
 set fmri(con_real1.8) 0.25
 
 set fmri(conpic_real.2) 1
-set fmri(conname_real.2) "body 2gt0"
+set fmri(conname_real.2) "Body 2gt0"
 set fmri(con_real2.1) -1
 set fmri(con_real2.2)  0
 set fmri(con_real2.3)  0
@@ -464,7 +465,7 @@ set fmri(con_real2.7)  0
 set fmri(con_real2.8)  0
 
 set fmri(conpic_real.3) 1
-set fmri(conname_real.3) "face 2gt0"
+set fmri(conname_real.3) "Face 2gt0"
 set fmri(con_real3.1)  0
 set fmri(con_real3.2) -1
 set fmri(con_real3.3)  0
@@ -475,7 +476,7 @@ set fmri(con_real3.7)  0
 set fmri(con_real3.8)  0
 
 set fmri(conpic_real.4) 1
-set fmri(conname_real.4) "place 2gt0"
+set fmri(conname_real.4) "Place 2gt0"
 set fmri(con_real4.1)  0
 set fmri(con_real4.2)  0
 set fmri(con_real4.3) -1
@@ -486,7 +487,7 @@ set fmri(con_real4.7)  1
 set fmri(con_real4.8)  0
 
 set fmri(conpic_real.5) 1
-set fmri(conname_real.5) "tools 2gt0"
+set fmri(conname_real.5) "Tools 2gt0"
 set fmri(con_real5.1)  0
 set fmri(con_real5.2)  0
 set fmri(con_real5.3)  0
@@ -495,6 +496,98 @@ set fmri(con_real5.5)  0
 set fmri(con_real5.6)  0
 set fmri(con_real5.7)  0
 set fmri(con_real5.8)  1
+
+set fmri(conpic_real.6) 1
+set fmri(conname_real.6) "Body gt Baseline"
+set fmri(con_real6.1)  0.5
+set fmri(con_real6.2)  0
+set fmri(con_real6.3)  0
+set fmri(con_real6.4)  0
+set fmri(con_real6.5)  0.5
+set fmri(con_real6.6)  0
+set fmri(con_real6.7)  0
+set fmri(con_real6.8)  0
+
+set fmri(conpic_real.7) 1
+set fmri(conname_real.7) "Face gt Baseline"
+set fmri(con_real7.1)  0
+set fmri(con_real7.2)  0.5
+set fmri(con_real7.3)  0
+set fmri(con_real7.4)  0
+set fmri(con_real7.5)  0
+set fmri(con_real7.6)  0.5
+set fmri(con_real7.7)  0
+set fmri(con_real7.8)  0
+
+set fmri(conpic_real.8) 1
+set fmri(conname_real.8) "Place gt Baseline"
+set fmri(con_real8.1)  0
+set fmri(con_real8.2)  0
+set fmri(con_real8.3)  0.5
+set fmri(con_real8.4)  0
+set fmri(con_real8.5)  0
+set fmri(con_real8.6)  0
+set fmri(con_real8.7)  0.5
+set fmri(con_real8.8)  0
+
+set fmri(conpic_real.9) 1
+set fmri(conname_real.9) "Tools gt Baseline"
+set fmri(con_real9.1)  0
+set fmri(con_real9.2)  0
+set fmri(con_real9.3)  0
+set fmri(con_real9.4)  0.5
+set fmri(con_real9.5)  0
+set fmri(con_real9.6)  0
+set fmri(con_real9.7)  0
+set fmri(con_real9.8)  0.5
+
+set fmri(conpic_real.10) 1
+set fmri(conname_real.10) "Body gt (Face+Place+Tools)"
+set fmri(con_real10.1)  0.5
+set fmri(con_real10.2)  -0.166666666666667
+set fmri(con_real10.3)  -0.166666666666667
+set fmri(con_real10.4)  -0.166666666666667
+set fmri(con_real10.5)  0.5
+set fmri(con_real10.6)  -0.166666666666667
+set fmri(con_real10.7)  -0.166666666666667
+set fmri(con_real10.8)  -0.166666666666667
+
+set fmri(conpic_real.11) 1
+set fmri(conname_real.11) "Face gt (Body+Place+Tools)"
+set fmri(con_real11.1)  -0.166666666666667
+set fmri(con_real11.2)  0.5
+set fmri(con_real11.3)  -0.166666666666667
+set fmri(con_real11.4)  -0.166666666666667
+set fmri(con_real11.5)  -0.166666666666667
+set fmri(con_real11.6)  0.5
+set fmri(con_real11.7)  -0.166666666666667
+set fmri(con_real11.8)  -0.166666666666667
+
+set fmri(conpic_real.12) 1
+set fmri(conname_real.12) "Place gt (Body+Face+Tools)"
+set fmri(con_real12.1)  -0.166666666666667
+set fmri(con_real12.2)  -0.166666666666667
+set fmri(con_real12.3)  0.5
+set fmri(con_real12.4)  -0.166666666666667
+set fmri(con_real12.5)  -0.166666666666667
+set fmri(con_real12.6)  -0.166666666666667
+set fmri(con_real12.7)  0.5
+set fmri(con_real12.8)  -0.166666666666667
+
+set fmri(conpic_real.13) 1
+set fmri(conname_real.13) "Tools gt (Body+Face+Place)"
+set fmri(con_real13.1)  -0.166666666666667
+set fmri(con_real13.2)  -0.166666666666667
+set fmri(con_real13.3)  -0.166666666666667
+set fmri(con_real13.4)  0.5
+set fmri(con_real13.5)  -0.166666666666667
+set fmri(con_real13.6)  -0.166666666666667
+set fmri(con_real13.7)  -0.166666666666667
+set fmri(con_real13.8)  0.5
+
+# 1     2     3      4      5     6     7      8
+# 0body 0face 0place 0tools 2body 2face 2place 2tools
+
 
 # Contrast masking - use >0 instead of thresholding?
 set fmri(conmask_zerothresh_yn) 0
