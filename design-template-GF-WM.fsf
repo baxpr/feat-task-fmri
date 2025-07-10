@@ -268,7 +268,7 @@ set fmri(totalVoxels) 66461696
 set fmri(ncopeinputs) 0
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "SUBJDIR/preproc_bold.nii.gz"
+set feat_files(1) "SUBJDIR/fmri.nii.gz"
 
 # Add confound EVs text file
 set fmri(confoundevs) 1
@@ -506,7 +506,7 @@ set fmri(conmask1_1) 0
 # Now options that don't appear in the GUI
 
 # Alternative (to BETting) mask image
-set fmri(alternative_mask) "brain_mask.nii.gz"
+set fmri(alternative_mask) "mask.nii.gz"
 
 # Initial structural space registration initialisation transform
 set fmri(init_initial_highres) ""

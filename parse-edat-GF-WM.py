@@ -9,7 +9,7 @@ import pandas
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--eprime_csv', required=True)
-parser.add_argument('--inputs_dir', required=True)
+parser.add_argument('--feat_dir', required=True)
 args = parser.parse_args()
 
 ep = pandas.read_csv(args.eprime_csv)
@@ -49,8 +49,9 @@ ep['ParaMod'] = 1
 ep['Condition'] = ep.BlockType + '_' + ep.StimType
 
 # Save events file for each condition
+os.makedirs(args.feat_dir, exist_ok=True)
 for c in set(ep.Condition):
-    efile = os.path.join(args.inputs_dir, f'events_{c}.tsv')
+    efile = os.path.join(args.feat_dir, f'events_{c}.tsv')
     rows = ep.loc[ep.Condition==c,:]
     rows.to_csv(
         efile, 
@@ -59,4 +60,3 @@ for c in set(ep.Condition):
         header=False, 
         index=False, 
         )
-
