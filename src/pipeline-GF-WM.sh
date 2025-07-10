@@ -42,9 +42,14 @@ echo Copying images
 cp "${fmri_niigz}" "${feat_dir}"/fmri.nii.gz
 cp "${mask_niigz}" "${feat_dir}"/mask.nii.gz
 
-# Update the FEAT design file with input directory name
+# Update the FEAT design file with input directory name. Assume our template
+# is in the same dir as this script
 echo Creating design file
-sed -e "s:SUBJDIR:${feat_dir}:g" design-template-GF-WM.fsf > "${feat_dir}"/design.fsf
+src_dir=$(dirname "${BASH_SOURCE[0]}")
+sed -e "s:SUBJDIR:${feat_dir}:g" "${src_dir}"/design-template-GF-WM.fsf > "${feat_dir}"/design.fsf
+
+# Verify that TR, nvols in design file match the fmri nifti
+check-tr_vols.py --design_fsf "${feat_dir}"/design.fsf
 
 # Run the fmri
 cd "${feat_dir}"
