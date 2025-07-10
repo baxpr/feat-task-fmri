@@ -156,10 +156,6 @@ set fmri(evs_orig) 8
 set fmri(evs_real) 8
 set fmri(evs_vox) 0
 
-# Number of contrasts
-set fmri(ncon_orig) 1
-set fmri(ncon_real) 1
-
 # Number of F-tests
 set fmri(nftests_orig) 0
 set fmri(nftests_real) 0
@@ -178,10 +174,10 @@ set fmri(threshmask) ""
 # 1 : Uncorrected
 # 2 : Voxel
 # 3 : Cluster
-set fmri(thresh) 0
+set fmri(thresh) 1
 
 # P threshold
-set fmri(prob_thresh) 0.05
+set fmri(prob_thresh) 0.005
 
 # Z threshold
 set fmri(z_thresh) 3.1
@@ -208,7 +204,7 @@ set fmri(rendertype) 1
 # 3 : Mean functional
 # 4 : First functional
 # 5 : Standard space template
-set fmri(bgimage) 1
+set fmri(bgimage) 3
 
 # Create time series plots
 set fmri(tsplot_yn) 0
@@ -830,65 +826,66 @@ set fmri(ortho8.8) 0
 set fmri(con_mode_old) orig
 set fmri(con_mode) orig
 
-# Display images for contrast_real 1
+# Number of contrasts
+set fmri(ncon_orig) 0
+set fmri(ncon_real) 5
+
+# 0body 0face 0place 0tools 2body 2face 2place 2tools
+
 set fmri(conpic_real.1) 1
-
-# Title for contrast_real 1
 set fmri(conname_real.1) "2gt0"
-
-# Real contrast_real vector 1 element 1
 set fmri(con_real1.1) -.25
-
-# Real contrast_real vector 1 element 2
 set fmri(con_real1.2) -.25
-
-# Real contrast_real vector 1 element 3
 set fmri(con_real1.3) -.25
-
-# Real contrast_real vector 1 element 4
 set fmri(con_real1.4) -.25
-
-# Real contrast_real vector 1 element 5
 set fmri(con_real1.5) 0.25
-
-# Real contrast_real vector 1 element 6
 set fmri(con_real1.6) 0.25
-
-# Real contrast_real vector 1 element 7
 set fmri(con_real1.7) 0.25
-
-# Real contrast_real vector 1 element 8
 set fmri(con_real1.8) 0.25
 
-# Display images for contrast_orig 1
-set fmri(conpic_orig.1) 1
+set fmri(conpic_real.2) 1
+set fmri(conname_real.2) "body 2gt0"
+set fmri(con_real2.1) -1
+set fmri(con_real2.2)  0
+set fmri(con_real2.3)  0
+set fmri(con_real2.4)  0
+set fmri(con_real2.5)  1
+set fmri(con_real2.6)  0
+set fmri(con_real2.7)  0
+set fmri(con_real2.8)  0
 
-# Title for contrast_orig 1
-set fmri(conname_orig.1) "2gt0"
+set fmri(conpic_real.3) 1
+set fmri(conname_real.3) "face 2gt0"
+set fmri(con_real3.1)  0
+set fmri(con_real3.2) -1
+set fmri(con_real3.3)  0
+set fmri(con_real3.4)  0
+set fmri(con_real3.5)  0
+set fmri(con_real3.6)  1
+set fmri(con_real3.7)  0
+set fmri(con_real3.8)  0
 
-# Real contrast_orig vector 1 element 1
-set fmri(con_orig1.1) -.25
+set fmri(conpic_real.4) 1
+set fmri(conname_real.4) "place 2gt0"
+set fmri(con_real4.1)  0
+set fmri(con_real4.2)  0
+set fmri(con_real4.3) -1
+set fmri(con_real4.4)  0
+set fmri(con_real4.5)  0
+set fmri(con_real4.6)  0
+set fmri(con_real4.7)  1
+set fmri(con_real4.8)  0
 
-# Real contrast_orig vector 1 element 2
-set fmri(con_orig1.2) -.25
-
-# Real contrast_orig vector 1 element 3
-set fmri(con_orig1.3) -.25
-
-# Real contrast_orig vector 1 element 4
-set fmri(con_orig1.4) -.25
-
-# Real contrast_orig vector 1 element 5
-set fmri(con_orig1.5) 0.25
-
-# Real contrast_orig vector 1 element 6
-set fmri(con_orig1.6) 0.25
-
-# Real contrast_orig vector 1 element 7
-set fmri(con_orig1.7) 0.25
-
-# Real contrast_orig vector 1 element 8
-set fmri(con_orig1.8) 0.25
+set fmri(conpic_real.5) 1
+set fmri(conname_real.5) "tools 2gt0"
+set fmri(con_real5.1)  0
+set fmri(con_real5.2)  0
+set fmri(con_real5.3)  0
+set fmri(con_real5.4) -1
+set fmri(con_real5.5)  0
+set fmri(con_real5.6)  0
+set fmri(con_real5.7)  0
+set fmri(con_real5.8)  1
 
 # Contrast masking - use >0 instead of thresholding?
 set fmri(conmask_zerothresh_yn) 0
