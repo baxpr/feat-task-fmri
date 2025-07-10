@@ -276,549 +276,158 @@ set fmri(confoundevs) 1
 # Confound EVs text file for analysis 1
 set confoundev_files(1) "SUBJDIR/confounds.tsv"
 
-# EV 1 title
 set fmri(evtitle1) "0-Back_Body"
-
-# Basic waveform shape (EV 1)
-# 0 : Square
-# 1 : Sinusoid
-# 2 : Custom (1 entry per volume)
-# 3 : Custom (3 column format)
-# 4 : Interaction
-# 10 : Empty (all zeros)
 set fmri(shape1) 3
-
-# Convolution (EV 1)
-# 0 : None
-# 1 : Gaussian
-# 2 : Gamma
-# 3 : Double-Gamma HRF
-# 4 : Gamma basis functions
-# 5 : Sine basis functions
-# 6 : FIR basis functions
-# 8 : Alternate Double-Gamma
 set fmri(convolve1) 2
-
-# Convolve phase (EV 1)
 set fmri(convolve_phase1) 0
-
-# Apply temporal filtering (EV 1)
 set fmri(tempfilt_yn1) 1
-
-# Add temporal derivative (EV 1)
 set fmri(deriv_yn1) 0
-
-# Custom EV file (EV 1)
 set fmri(custom1) "SUBJDIR/events_0-Back_Body.tsv"
-
-# Gamma sigma (EV 1)
 set fmri(gammasigma1) 3
-
-# Gamma delay (EV 1)
 set fmri(gammadelay1) 6
-
-# Orthogonalise EV 1 wrt EV 0
 set fmri(ortho1.0) 0
-
-# Orthogonalise EV 1 wrt EV 1
 set fmri(ortho1.1) 0
-
-# Orthogonalise EV 1 wrt EV 2
 set fmri(ortho1.2) 0
-
-# Orthogonalise EV 1 wrt EV 3
 set fmri(ortho1.3) 0
-
-# Orthogonalise EV 1 wrt EV 4
 set fmri(ortho1.4) 0
-
-# Orthogonalise EV 1 wrt EV 5
 set fmri(ortho1.5) 0
-
-# Orthogonalise EV 1 wrt EV 6
 set fmri(ortho1.6) 0
-
-# Orthogonalise EV 1 wrt EV 7
 set fmri(ortho1.7) 0
-
-# Orthogonalise EV 1 wrt EV 8
 set fmri(ortho1.8) 0
 
-# EV 2 title
 set fmri(evtitle2) "0-Back_Face"
-
-# Basic waveform shape (EV 2)
-# 0 : Square
-# 1 : Sinusoid
-# 2 : Custom (1 entry per volume)
-# 3 : Custom (3 column format)
-# 4 : Interaction
-# 10 : Empty (all zeros)
 set fmri(shape2) 3
-
-# Convolution (EV 2)
-# 0 : None
-# 1 : Gaussian
-# 2 : Gamma
-# 3 : Double-Gamma HRF
-# 4 : Gamma basis functions
-# 5 : Sine basis functions
-# 6 : FIR basis functions
-# 8 : Alternate Double-Gamma
 set fmri(convolve2) 2
-
-# Convolve phase (EV 2)
 set fmri(convolve_phase2) 0
-
-# Apply temporal filtering (EV 2)
 set fmri(tempfilt_yn2) 1
-
-# Add temporal derivative (EV 2)
 set fmri(deriv_yn2) 0
-
-# Custom EV file (EV 2)
 set fmri(custom2) "SUBJDIR/events_0-Back_Face.tsv"
-
-# Gamma sigma (EV 2)
 set fmri(gammasigma2) 3
-
-# Gamma delay (EV 2)
 set fmri(gammadelay2) 6
-
-# Orthogonalise EV 2 wrt EV 0
 set fmri(ortho2.0) 0
-
-# Orthogonalise EV 2 wrt EV 1
 set fmri(ortho2.1) 0
-
-# Orthogonalise EV 2 wrt EV 2
 set fmri(ortho2.2) 0
-
-# Orthogonalise EV 2 wrt EV 3
 set fmri(ortho2.3) 0
-
-# Orthogonalise EV 2 wrt EV 4
 set fmri(ortho2.4) 0
-
-# Orthogonalise EV 2 wrt EV 5
 set fmri(ortho2.5) 0
-
-# Orthogonalise EV 2 wrt EV 6
 set fmri(ortho2.6) 0
-
-# Orthogonalise EV 2 wrt EV 7
 set fmri(ortho2.7) 0
-
-# Orthogonalise EV 2 wrt EV 8
 set fmri(ortho2.8) 0
 
-# EV 3 title
 set fmri(evtitle3) "0-Back_Place"
-
-# Basic waveform shape (EV 3)
-# 0 : Square
-# 1 : Sinusoid
-# 2 : Custom (1 entry per volume)
-# 3 : Custom (3 column format)
-# 4 : Interaction
-# 10 : Empty (all zeros)
 set fmri(shape3) 3
-
-# Convolution (EV 3)
-# 0 : None
-# 1 : Gaussian
-# 2 : Gamma
-# 3 : Double-Gamma HRF
-# 4 : Gamma basis functions
-# 5 : Sine basis functions
-# 6 : FIR basis functions
-# 8 : Alternate Double-Gamma
 set fmri(convolve3) 2
-
-# Convolve phase (EV 3)
 set fmri(convolve_phase3) 0
-
-# Apply temporal filtering (EV 3)
 set fmri(tempfilt_yn3) 1
-
-# Add temporal derivative (EV 3)
 set fmri(deriv_yn3) 0
-
-# Custom EV file (EV 3)
 set fmri(custom3) "SUBJDIR/events_0-Back_Place.tsv"
-
-# Gamma sigma (EV 3)
 set fmri(gammasigma3) 3
-
-# Gamma delay (EV 3)
 set fmri(gammadelay3) 6
-
-# Orthogonalise EV 3 wrt EV 0
 set fmri(ortho3.0) 0
-
-# Orthogonalise EV 3 wrt EV 1
 set fmri(ortho3.1) 0
-
-# Orthogonalise EV 3 wrt EV 2
 set fmri(ortho3.2) 0
-
-# Orthogonalise EV 3 wrt EV 3
 set fmri(ortho3.3) 0
-
-# Orthogonalise EV 3 wrt EV 4
 set fmri(ortho3.4) 0
-
-# Orthogonalise EV 3 wrt EV 5
 set fmri(ortho3.5) 0
-
-# Orthogonalise EV 3 wrt EV 6
 set fmri(ortho3.6) 0
-
-# Orthogonalise EV 3 wrt EV 7
 set fmri(ortho3.7) 0
-
-# Orthogonalise EV 3 wrt EV 8
 set fmri(ortho3.8) 0
 
-# EV 4 title
 set fmri(evtitle4) "0-Back_Tools"
-
-# Basic waveform shape (EV 4)
-# 0 : Square
-# 1 : Sinusoid
-# 2 : Custom (1 entry per volume)
-# 3 : Custom (3 column format)
-# 4 : Interaction
-# 10 : Empty (all zeros)
 set fmri(shape4) 3
-
-# Convolution (EV 4)
-# 0 : None
-# 1 : Gaussian
-# 2 : Gamma
-# 3 : Double-Gamma HRF
-# 4 : Gamma basis functions
-# 5 : Sine basis functions
-# 6 : FIR basis functions
-# 8 : Alternate Double-Gamma
 set fmri(convolve4) 2
-
-# Convolve phase (EV 4)
 set fmri(convolve_phase4) 0
-
-# Apply temporal filtering (EV 4)
 set fmri(tempfilt_yn4) 1
-
-# Add temporal derivative (EV 4)
 set fmri(deriv_yn4) 0
-
-# Custom EV file (EV 4)
 set fmri(custom4) "SUBJDIR/events_0-Back_Tools.tsv"
-
-# Gamma sigma (EV 4)
 set fmri(gammasigma4) 3
-
-# Gamma delay (EV 4)
 set fmri(gammadelay4) 6
-
-# Orthogonalise EV 4 wrt EV 0
 set fmri(ortho4.0) 0
-
-# Orthogonalise EV 4 wrt EV 1
 set fmri(ortho4.1) 0
-
-# Orthogonalise EV 4 wrt EV 2
 set fmri(ortho4.2) 0
-
-# Orthogonalise EV 4 wrt EV 3
 set fmri(ortho4.3) 0
-
-# Orthogonalise EV 4 wrt EV 4
 set fmri(ortho4.4) 0
-
-# Orthogonalise EV 4 wrt EV 5
 set fmri(ortho4.5) 0
-
-# Orthogonalise EV 4 wrt EV 6
 set fmri(ortho4.6) 0
-
-# Orthogonalise EV 4 wrt EV 7
 set fmri(ortho4.7) 0
-
-# Orthogonalise EV 4 wrt EV 8
 set fmri(ortho4.8) 0
 
-# EV 5 title
 set fmri(evtitle5) "2-Back_Body"
-
-# Basic waveform shape (EV 5)
-# 0 : Square
-# 1 : Sinusoid
-# 2 : Custom (1 entry per volume)
-# 3 : Custom (3 column format)
-# 4 : Interaction
-# 10 : Empty (all zeros)
 set fmri(shape5) 3
-
-# Convolution (EV 5)
-# 0 : None
-# 1 : Gaussian
-# 2 : Gamma
-# 3 : Double-Gamma HRF
-# 4 : Gamma basis functions
-# 5 : Sine basis functions
-# 6 : FIR basis functions
-# 8 : Alternate Double-Gamma
 set fmri(convolve5) 2
-
-# Convolve phase (EV 5)
 set fmri(convolve_phase5) 0
-
-# Apply temporal filtering (EV 5)
 set fmri(tempfilt_yn5) 1
-
-# Add temporal derivative (EV 5)
 set fmri(deriv_yn5) 0
-
-# Custom EV file (EV 5)
 set fmri(custom5) "SUBJDIR/events_2-Back_Body.tsv"
-
-# Gamma sigma (EV 5)
 set fmri(gammasigma5) 3
-
-# Gamma delay (EV 5)
 set fmri(gammadelay5) 6
-
-# Orthogonalise EV 5 wrt EV 0
 set fmri(ortho5.0) 0
-
-# Orthogonalise EV 5 wrt EV 1
 set fmri(ortho5.1) 0
-
-# Orthogonalise EV 5 wrt EV 2
 set fmri(ortho5.2) 0
-
-# Orthogonalise EV 5 wrt EV 3
 set fmri(ortho5.3) 0
-
-# Orthogonalise EV 5 wrt EV 4
 set fmri(ortho5.4) 0
-
-# Orthogonalise EV 5 wrt EV 5
 set fmri(ortho5.5) 0
-
-# Orthogonalise EV 5 wrt EV 6
 set fmri(ortho5.6) 0
-
-# Orthogonalise EV 5 wrt EV 7
 set fmri(ortho5.7) 0
-
-# Orthogonalise EV 5 wrt EV 8
 set fmri(ortho5.8) 0
 
-# EV 6 title
 set fmri(evtitle6) "2-Back_Face"
-
-# Basic waveform shape (EV 6)
-# 0 : Square
-# 1 : Sinusoid
-# 2 : Custom (1 entry per volume)
-# 3 : Custom (3 column format)
-# 4 : Interaction
-# 10 : Empty (all zeros)
 set fmri(shape6) 3
-
-# Convolution (EV 6)
-# 0 : None
-# 1 : Gaussian
-# 2 : Gamma
-# 3 : Double-Gamma HRF
-# 4 : Gamma basis functions
-# 5 : Sine basis functions
-# 6 : FIR basis functions
-# 8 : Alternate Double-Gamma
 set fmri(convolve6) 2
-
-# Convolve phase (EV 6)
 set fmri(convolve_phase6) 0
-
-# Apply temporal filtering (EV 6)
 set fmri(tempfilt_yn6) 1
-
-# Add temporal derivative (EV 6)
 set fmri(deriv_yn6) 0
-
-# Custom EV file (EV 6)
 set fmri(custom6) "SUBJDIR/events_2-Back_Face.tsv"
-
-# Gamma sigma (EV 6)
 set fmri(gammasigma6) 3
-
-# Gamma delay (EV 6)
 set fmri(gammadelay6) 6
-
-# Orthogonalise EV 6 wrt EV 0
 set fmri(ortho6.0) 0
-
-# Orthogonalise EV 6 wrt EV 1
 set fmri(ortho6.1) 0
-
-# Orthogonalise EV 6 wrt EV 2
 set fmri(ortho6.2) 0
-
-# Orthogonalise EV 6 wrt EV 3
 set fmri(ortho6.3) 0
-
-# Orthogonalise EV 6 wrt EV 4
 set fmri(ortho6.4) 0
-
-# Orthogonalise EV 6 wrt EV 5
 set fmri(ortho6.5) 0
-
-# Orthogonalise EV 6 wrt EV 6
 set fmri(ortho6.6) 0
-
-# Orthogonalise EV 6 wrt EV 7
 set fmri(ortho6.7) 0
-
-# Orthogonalise EV 6 wrt EV 8
 set fmri(ortho6.8) 0
 
-# EV 7 title
 set fmri(evtitle7) "2-Back_Place"
-
-# Basic waveform shape (EV 7)
-# 0 : Square
-# 1 : Sinusoid
-# 2 : Custom (1 entry per volume)
-# 3 : Custom (3 column format)
-# 4 : Interaction
-# 10 : Empty (all zeros)
 set fmri(shape7) 3
-
-# Convolution (EV 7)
-# 0 : None
-# 1 : Gaussian
-# 2 : Gamma
-# 3 : Double-Gamma HRF
-# 4 : Gamma basis functions
-# 5 : Sine basis functions
-# 6 : FIR basis functions
-# 8 : Alternate Double-Gamma
 set fmri(convolve7) 2
-
-# Convolve phase (EV 7)
 set fmri(convolve_phase7) 0
-
-# Apply temporal filtering (EV 7)
 set fmri(tempfilt_yn7) 1
-
-# Add temporal derivative (EV 7)
 set fmri(deriv_yn7) 0
-
-# Custom EV file (EV 7)
 set fmri(custom7) "SUBJDIR/events_2-Back_Place.tsv"
-
-# Gamma sigma (EV 7)
 set fmri(gammasigma7) 3
-
-# Gamma delay (EV 7)
 set fmri(gammadelay7) 6
-
-# Orthogonalise EV 7 wrt EV 0
 set fmri(ortho7.0) 0
-
-# Orthogonalise EV 7 wrt EV 1
 set fmri(ortho7.1) 0
-
-# Orthogonalise EV 7 wrt EV 2
 set fmri(ortho7.2) 0
-
-# Orthogonalise EV 7 wrt EV 3
 set fmri(ortho7.3) 0
-
-# Orthogonalise EV 7 wrt EV 4
 set fmri(ortho7.4) 0
-
-# Orthogonalise EV 7 wrt EV 5
 set fmri(ortho7.5) 0
-
-# Orthogonalise EV 7 wrt EV 6
 set fmri(ortho7.6) 0
-
-# Orthogonalise EV 7 wrt EV 7
 set fmri(ortho7.7) 0
-
-# Orthogonalise EV 7 wrt EV 8
 set fmri(ortho7.8) 0
 
-# EV 8 title
 set fmri(evtitle8) "2-Back_Tools"
-
-# Basic waveform shape (EV 8)
-# 0 : Square
-# 1 : Sinusoid
-# 2 : Custom (1 entry per volume)
-# 3 : Custom (3 column format)
-# 4 : Interaction
-# 10 : Empty (all zeros)
 set fmri(shape8) 3
-
-# Convolution (EV 8)
-# 0 : None
-# 1 : Gaussian
-# 2 : Gamma
-# 3 : Double-Gamma HRF
-# 4 : Gamma basis functions
-# 5 : Sine basis functions
-# 6 : FIR basis functions
-# 8 : Alternate Double-Gamma
 set fmri(convolve8) 2
-
-# Convolve phase (EV 8)
 set fmri(convolve_phase8) 0
-
-# Apply temporal filtering (EV 8)
 set fmri(tempfilt_yn8) 1
-
-# Add temporal derivative (EV 8)
 set fmri(deriv_yn8) 0
-
-# Custom EV file (EV 8)
 set fmri(custom8) "SUBJDIR/events_2-Back_Tools.tsv"
-
-# Gamma sigma (EV 8)
 set fmri(gammasigma8) 3
-
-# Gamma delay (EV 8)
 set fmri(gammadelay8) 6
-
-# Orthogonalise EV 8 wrt EV 0
 set fmri(ortho8.0) 0
-
-# Orthogonalise EV 8 wrt EV 1
 set fmri(ortho8.1) 0
-
-# Orthogonalise EV 8 wrt EV 2
 set fmri(ortho8.2) 0
-
-# Orthogonalise EV 8 wrt EV 3
 set fmri(ortho8.3) 0
-
-# Orthogonalise EV 8 wrt EV 4
 set fmri(ortho8.4) 0
-
-# Orthogonalise EV 8 wrt EV 5
 set fmri(ortho8.5) 0
-
-# Orthogonalise EV 8 wrt EV 6
 set fmri(ortho8.6) 0
-
-# Orthogonalise EV 8 wrt EV 7
 set fmri(ortho8.7) 0
-
-# Orthogonalise EV 8 wrt EV 8
 set fmri(ortho8.8) 0
+
 
 # Contrast & F-tests mode
 # real : control real EVs
