@@ -3,10 +3,10 @@
 procyamlversion: 3.0.0-dev.0
 containers:
   - name: fsl
-    path: fsl-base_ NNNN
-    source: docker://baxterprogers/fsl-base NNNN
+    path: fsl-base_v6.0.7.18.sif
+    source: docker://baxterprogers/fsl-base:v6.0.7.18
 requirements:
-  walltime: 0-8
+  walltime: 0-4
   memory: 8G
 jobtemplate: job_template_v3.txt
 
@@ -37,7 +37,7 @@ inputs:
 outputs:
   - {path: feat-GF-WM/GF-WM.feat, type: DIR, resource: FEAT}
   - {path: HTML, type: DIR, resource: HTML}
-  - {path: feat-task-fmri-1.0.0, type: DIR, resource: SCRIPTS}
+  - {path: feat-task-fmri-1.0.0/src, type: DIR, resource: SCRIPTS}
   - {path: eprime.csv, type: FILE, resource: EPRIME_CSV}
 
 
