@@ -31,24 +31,24 @@ def main():
 
     # Pull out header, main body. No special treatment for carriage returns (DOTALL)
     expr_main = re.compile(
-        '\*\*\* Header Start \*\*\*(?P<hdr>.*)\*\*\* Header End \*\*\*'
-        '(?P<body>.*)'
+        r'\*\*\* Header Start \*\*\*(?P<hdr>.*)\*\*\* Header End \*\*\*'
+        r'(?P<body>.*)'
         ,re.DOTALL)
     match_main = re.match(expr_main,txt)
 
     # Parse header into fields and values
     expr_fields = re.compile(
-        '^\t*(?P<field>.*?)\: (?P<value>.*)$'
+        r'^\t*(?P<field>.*?)\: (?P<value>.*)$'
         ,re.MULTILINE)
     parsed_hdr = re.findall(expr_fields,match_main.group('hdr'))
     parsed_hdr.append(('Level','0'))
 
     # Pull out log frames. Can't be greedy if we want to separate frames, so lots of *?
     expr_frame = re.compile(
-        '\t*?Level\: (?P<level>[0-9]*?)[\n\r\t]*?'
-        '\*\*\* LogFrame Start \*\*\*[\n\r\t]*?'
-        '(?P<frame>.*?)[\n\r\t]*?'
-        '\*\*\* LogFrame End \*\*\*'
+        r'\t*?Level\: (?P<level>[0-9]*?)[\n\r\t]*?'
+        r'\*\*\* LogFrame Start \*\*\*[\n\r\t]*?'
+        r'(?P<frame>.*?)[\n\r\t]*?'
+        r'\*\*\* LogFrame End \*\*\*'
         ,re.DOTALL)
     match_frame = re.findall(expr_frame,match_main.group('body'))
     print(f'Found {len(match_frame)} log frames to convert')
