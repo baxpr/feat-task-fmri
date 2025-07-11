@@ -24,7 +24,7 @@ inputs:
         types: wm*
         resources:
           - {resource: NIFTI, fmatch: '*.nii.gz', fdest: fmri1.nii.gz}
-          - {resource: EPRIME, fmatch: '*.txt', fdest: eprime.txt}
+          - {resource: EPRIME_TXT, fmatch: '*.txt', fdest: eprime.txt}
         needs_qc: True
 
     assessors:
