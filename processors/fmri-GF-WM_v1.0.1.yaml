@@ -37,7 +37,7 @@ inputs:
 outputs:
   - {path: feat-GF-WM/GF-WM.feat, type: DIR, resource: FEAT}
   - {path: HTML, type: DIR, resource: HTML}
-  - {path: feat-task-fmri-1.0.0/src, type: DIR, resource: SCRIPTS}
+  - {path: feat-task-fmri-1.0.1/src, type: DIR, resource: SCRIPTS}
   - {path: eprime.csv, type: FILE, resource: EPRIME_CSV}
 
 
@@ -47,9 +47,9 @@ command:
   args: >-
     bash -c '
     cd /OUTPUTS &&
-    wget https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.0.0.tar.gz &&
-    tar -zxf v1.0.0.tar.gz &&
-    export PATH=/OUTPUTS/feat-task-fmri-1.0.0/src:\$PATH &&
+    wget https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.0.1.tar.gz &&
+    tar -zxf v1.0.1.tar.gz &&
+    export PATH=/OUTPUTS/feat-task-fmri-1.0.1/src:\$PATH &&
     pipeline-GF-WM.sh 
       --eprime_txt /INPUTS/eprime.txt
       --fmriprep_dir /INPUTS/fmriprepBIDS/fmriprepBIDS
