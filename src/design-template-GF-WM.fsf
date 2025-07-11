@@ -29,7 +29,7 @@ set fmri(featwatcher_yn) 0
 set fmri(sscleanup_yn) 0
 
 # Output directory
-set fmri(outputdir) "SUBJDIR/output"
+set fmri(outputdir) "SUBJDIR/GF-WM"
 
 # TR(s)
 set fmri(tr) 1.300001

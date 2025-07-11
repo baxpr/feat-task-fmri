@@ -57,4 +57,8 @@ echo Running FEAT
 cd "${feat_dir}"
 feat design.fsf
 
-
+# Copy html to a different location to be a separate output
+mkdir "${out_dir}"/HTML
+cp -R "${feat_dir}"/GF-WM/*.html "${out_dir}"/HTML
+cp -R "${feat_dir}"/GF-WM/*.png "${out_dir}"/HTML
+cp -R "${feat_dir}"/GF-WM/.files "${out_dir}"/HTML
