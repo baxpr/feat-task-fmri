@@ -47,8 +47,8 @@ command:
   args: >-
     bash -c '
     cd /OUTPUTS &&
-    curl -o scripts.tar.gz -L https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.0.0.tar.gz &&
-    tar -zxf scripts.tar.gz &&
+    wget https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.0.0.tar.gz &&
+    tar -zxf v1.0.0.tar.gz &&
     export PATH=/OUTPUTS/feat-task-fmri-1.0.0/src:\$PATH &&
     pipeline-GF-WM.sh 
       --eprime_txt /INPUTS/eprime.txt
