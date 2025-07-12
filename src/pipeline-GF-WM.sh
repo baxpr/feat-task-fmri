@@ -4,9 +4,6 @@
 #
 # All input files must have fully specified paths
 
-# USER env var workaround for FSL FEAT with singularity --contain
-export USER=dockeruser
-
 # Parse input options
 while [[ $# -gt 0 ]]; do
     key="$1"
