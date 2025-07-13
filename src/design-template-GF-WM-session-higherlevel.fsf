@@ -30,7 +30,7 @@ set fmri(featwatcher_yn) 1
 set fmri(sscleanup_yn) 0
 
 # Output directory
-set fmri(outputdir) "output"
+set fmri(outputdir) "OUTDIR"
 
 # TR(s)
 set fmri(tr) 3
@@ -308,10 +308,10 @@ set fmri(copeinput.12) 1
 set fmri(copeinput.13) 1
 
 # 4D AVW data or FEAT directory (1)
-set feat_files(1) "SUBJDIR/wm1.feat"
+set feat_files(1) "WM1DIR"
 
 # 4D AVW data or FEAT directory (2)
-set feat_files(2) "SUBJDIR/wm2.feat"
+set feat_files(2) "WM2DIR"
 
 # Add confound EVs text file
 set fmri(confoundevs) 0
