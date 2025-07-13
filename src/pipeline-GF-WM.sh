@@ -57,6 +57,9 @@ echo Running FEAT
 cd "${feat_dir}"
 feat design.fsf
 
+# Set up regdir ahead of higher level analysis
+setup-reg.sh --feat_dir "${feat_dir}"
+
 # Copy html to a different location to be a separate output
 mkdir "${out_dir}"/HTML
 cp -R "${feat_dir}"/GF-WM.feat/*.html "${out_dir}"/HTML
