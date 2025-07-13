@@ -46,7 +46,8 @@ cp "${mask_niigz}" "${feat_dir}"/mask.nii.gz
 # is in the same dir as this script
 echo Creating design file
 src_dir=$(dirname "${BASH_SOURCE[0]}")
-sed -e "s:SUBJDIR:${feat_dir}:g" "${src_dir}"/design-template-GF-WM.fsf > "${feat_dir}"/design.fsf
+sed -e "s:SUBJDIR:${feat_dir}:g" "${src_dir}"/design-template-GF-WM-run-firstlevel.fsf \
+    > "${feat_dir}"/design.fsf
 
 # Verify that TR, nvols in design file match the fmri nifti
 echo Checking design file params
