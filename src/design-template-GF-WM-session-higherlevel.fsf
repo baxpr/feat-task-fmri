@@ -379,7 +379,7 @@ set fmri(con_mode) real
 set fmri(conpic_real.1) 1
 
 # Title for contrast_real 1
-set fmri(conname_real.1) "group mean"
+set fmri(conname_real.1) "participant session mean"
 
 # Real contrast_real vector 1 element 1
 set fmri(con_real1.1) 1
