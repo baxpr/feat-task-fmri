@@ -19,8 +19,9 @@ done
 feat_dir="${out_dir}/feat-GF-WM"
 mkdir -p "${feat_dir}"
 
-# Find preprocessed fmri, brain mask, and confounds tsv in fmriprep dir
+# Find preprocessed T1, fmri, brain mask, and confounds tsv in fmriprep dir
 echo Finding fmriprep files
+anat_niigz=$(find_fmriprep.py --fmriprep_dir ${fmriprep_dir} --output anat)
 fmri_niigz=$(find_fmriprep.py --fmriprep_dir ${fmriprep_dir} --output fmri)
 mask_niigz=$(find_fmriprep.py --fmriprep_dir ${fmriprep_dir} --output mask)
 confounds_tsv=$(find_fmriprep.py --fmriprep_dir ${fmriprep_dir} --output confounds)
@@ -59,7 +60,7 @@ cd "${feat_dir}"
 feat design.fsf
 
 # Set up regdir ahead of higher level analysis
-setup-reg.sh --feat_dir "${feat_dir}"
+setup-reg.sh --std_niigz "${anat_niigz}" --feat_dir "${feat_dir}"
 
 # Copy html to a different location to be a separate output
 mkdir "${out_dir}"/HTML
