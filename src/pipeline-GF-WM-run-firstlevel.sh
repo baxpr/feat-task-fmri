@@ -60,9 +60,11 @@ cd "${feat_dir}"
 feat design.fsf
 
 # Set up regdir ahead of higher level analysis
-setup-reg.sh --std_niigz "${anat_niigz}" --feat_dir "${feat_dir}"
+echo Setting up stdreg
+setup-reg.sh --std_niigz "${anat_niigz}" --feat_dir "${feat_dir}"/GF-WM.feat
 
 # Copy html to a different location to be a separate output
+echo Copying HTML
 mkdir "${out_dir}"/HTML
 cp -R "${feat_dir}"/GF-WM.feat/*.html "${out_dir}"/HTML
 cp -R "${feat_dir}"/GF-WM.feat/*.png "${out_dir}"/HTML
