@@ -15,9 +15,10 @@ bids_fmriprep = bids.layout.BIDSLayout(args.fmriprep_dir, validate=False)
 anat_niigz = bids_fmriprep.get(
     space=args.space,
     extension='.nii.gz',
-    desc='preproc_T1w',
+    desc='preproc',
+    suffix='T1w',
     )
-if len(fmri_niigz)!=1:
+if len(anat_niigz)!=1:
     raise Exception(f'Found {len(anat_niigz)} anat .nii.gz instead of 1')
 anat_niigz = anat_niigz[0]
 
