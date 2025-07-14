@@ -4,9 +4,9 @@
 # a couple of files with registration info since registration is not
 # performed at the first level.
 #
-# We will use the fmriprep anat as the "standard" to avoid transformation
-# issues. This means all participants must ultimately have the same 
-# voxel grid and positions in the fmriprep for a group analysis.
+# We will use the fmriprep mean fmri as the "standard" to avoid transformation
+# issues. This means all participants must have the same voxel grid and 
+# positions in the fmriprep for a group analysis to work.
 #
 # https://www.jiscmail.ac.uk/cgi-bin/webadmin?A2=fsl;a779b3b8.1408
 

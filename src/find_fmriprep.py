@@ -12,15 +12,14 @@ args = parser.parse_args()
 
 bids_fmriprep = bids.layout.BIDSLayout(args.fmriprep_dir, validate=False)
 
-anat_niigz = bids_fmriprep.get(
+meanfmri_niigz = bids_fmriprep.get(
     space=args.space,
     extension='.nii.gz',
-    desc='preproc',
-    suffix='T1w',
+    suffix='boldref',
     )
-if len(anat_niigz)!=1:
-    raise Exception(f'Found {len(anat_niigz)} anat .nii.gz instead of 1')
-anat_niigz = anat_niigz[0]
+if len(meanfmri_niigz)!=1:
+    raise Exception(f'Found {len(meanfmri_niigz)} anat .nii.gz instead of 1')
+meanfmri_niigz = meanfmri_niigz[0]
 
 fmri_niigz = bids_fmriprep.get(
     space=args.space,
@@ -53,8 +52,8 @@ if len(confounds_tsv)!=1:
     raise Exception(f'Found {len(confounds_tsv)} confounds.tsv instead of 1')
 confounds_tsv = confounds_tsv[0]
 
-if args.output=='anat':
-    print(anat_niigz.path)
+if args.output=='meanfmri':
+    print(meanfmri_niigz.path)
 elif args.output=='fmri':
     print(fmri_niigz.path)
 elif args.output=='mask':
