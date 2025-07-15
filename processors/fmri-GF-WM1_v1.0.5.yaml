@@ -21,7 +21,7 @@ inputs:
         
     scans:
       - name: scan_fmri
-        types: wm*
+        types: wm1*
         resources:
           - {resource: NIFTI, fmatch: '*.nii.gz', fdest: fmri1.nii.gz}
           - {resource: EPRIME_TXT, fmatch: '*.txt', fdest: eprime.txt}
@@ -37,7 +37,7 @@ inputs:
 outputs:
   - {path: feat-GF-WM/GF-WM.feat, type: DIR, resource: FEAT}
   - {path: HTML, type: DIR, resource: HTML}
-  - {path: feat-task-fmri-1.0.4/src, type: DIR, resource: SCRIPTS}
+  - {path: feat-task-fmri-1.0.5/src, type: DIR, resource: SCRIPTS}
   - {path: eprime.csv, type: FILE, resource: EPRIME_CSV}
 
 
@@ -47,10 +47,10 @@ command:
   args: >-
     bash -c '
     cd /OUTPUTS &&
-    wget https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.0.4.tar.gz &&
-    tar -zxf v1.0.4.tar.gz &&
-    export PATH=/OUTPUTS/feat-task-fmri-1.0.4/src:\$PATH &&
-    pipeline-GF-WM.sh
+    wget https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.0.5.tar.gz &&
+    tar -zxf v1.0.5.tar.gz &&
+    export PATH=/OUTPUTS/feat-task-fmri-1.0.5/src:\$PATH &&
+    pipeline-GF-WM-run-firstlevel.sh
       --eprime_txt /INPUTS/eprime.txt
       --fmriprep_dir /INPUTS/fmriprepBIDS/fmriprepBIDS
       --out_dir /OUTPUTS
