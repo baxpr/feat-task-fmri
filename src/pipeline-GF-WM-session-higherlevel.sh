@@ -22,8 +22,8 @@ echo Creating design file
 src_dir=$(dirname "${BASH_SOURCE[0]}")
 sed -e "s:WM1DIR:${wm1feat_dir}:g" "${src_dir}"/design-template-GF-WM-session-higherlevel.fsf \
     > "${out_dir}"/design.fsf
-sed -i "" -e "s:WM2DIR:${wm2feat_dir}:g" "${out_dir}"/design.fsf
-sed -i "" -e "s:OUTDIR:${out_dir}/GF-WM-12:g" "${out_dir}"/design.fsf
+sed -i -e "s:WM2DIR:${wm2feat_dir}:g" "${out_dir}"/design.fsf
+sed -i -e "s:OUTDIR:${out_dir}/GF-WM-12:g" "${out_dir}"/design.fsf
 
 # Run
 echo Running FEAT
