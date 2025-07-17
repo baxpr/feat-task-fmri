@@ -27,9 +27,9 @@ inputs:
 
 
 outputs:
-  - {path: GF-WM-12.feat, type: DIR, resource: FEAT}
+  - {path: GF-WM-12.gfeat, type: DIR, resource: FEAT}
   - {path: HTML, type: DIR, resource: HTML}
-  - {path: feat-task-fmri-1.0.8/src, type: DIR, resource: SCRIPTS}
+  - {path: feat-task-fmri-1.0.9/src, type: DIR, resource: SCRIPTS}
 
 
 command:
@@ -38,9 +38,9 @@ command:
   args: >-
     bash -c '
     cd /OUTPUTS &&
-    wget https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.0.8.tar.gz &&
-    tar -zxf v1.0.8.tar.gz &&
-    export PATH=/OUTPUTS/feat-task-fmri-1.0.8/src:\$PATH &&
+    wget https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.0.9.tar.gz &&
+    tar -zxf v1.0.9.tar.gz &&
+    export PATH=/OUTPUTS/feat-task-fmri-1.0.9/src:\$PATH &&
     pipeline-GF-WM-session-higherlevel.sh
       --wm1feat_dir /INPUTS/feat_wm1/FEAT
       --wm2feat_dir /INPUTS/feat_wm2/FEAT
