@@ -29,9 +29,3 @@ sed -i -e "s:OUTDIR:${out_dir}/GF-WM-12:g" "${out_dir}"/design.fsf
 echo Running FEAT
 cd "${out_dir}"
 feat design.fsf
-
-# Copy html to a different location to be a separate output
-mkdir "${out_dir}"/HTML
-cp -R "${out_dir}"/GF-WM-12.gfeat/*.html "${out_dir}"/HTML
-cp -R "${out_dir}"/GF-WM-12.gfeat/*.png "${out_dir}"/HTML
-cp -R "${out_dir}"/GF-WM-12.gfeat/.files "${out_dir}"/HTML
