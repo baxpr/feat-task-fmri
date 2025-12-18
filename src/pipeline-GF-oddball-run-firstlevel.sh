@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Main entrypoint for FSL/FEAT first level stats for GF WM task
+# Main entrypoint for FSL/FEAT first level stats for GF oddball task
 #
 # All input files must have fully specified paths
 
@@ -16,7 +16,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 # Where to put FEAT inputs
-feat_dir="${out_dir}/feat-GF-WM"
+feat_dir="${out_dir}/feat-GF-oddball"
 mkdir -p "${feat_dir}"
 
 # Find preprocessed T1, fmri, brain mask, and confounds tsv in fmriprep dir
@@ -32,7 +32,7 @@ eprime_to_csv.py -o "${out_dir}"/eprime.csv "${eprime_txt}"
 
 # Convert fmri timings to FEAT format
 echo Parsing eprime timings
-parse-edat-GF-WM.py --eprime_csv "${out_dir}"/eprime.csv --feat_dir "${feat_dir}"
+parse-edat-GF-oddball.py --eprime_csv "${out_dir}"/eprime.csv --feat_dir "${feat_dir}"
 
 # Extract desired confounds from confounds file
 echo Extracting confounds
@@ -47,7 +47,7 @@ cp "${mask_niigz}" "${feat_dir}"/mask.nii.gz
 # is in the same dir as this script
 echo Creating design file
 src_dir=$(dirname "${BASH_SOURCE[0]}")
-sed -e "s:SUBJDIR:${feat_dir}:g" "${src_dir}"/design-template-GF-WM-run-firstlevel.fsf \
+sed -e "s:SUBJDIR:${feat_dir}:g" "${src_dir}"/design-template-GF-oddball-run-firstlevel.fsf \
     > "${feat_dir}"/design.fsf
 
 # Verify that TR, nvols in design file match the fmri nifti
@@ -61,11 +61,11 @@ feat design.fsf
 
 # Set up regdir ahead of higher level analysis
 echo Setting up stdreg
-setup-reg.sh --std_niigz "${meanfmri_niigz}" --feat_dir "${feat_dir}"/GF-WM.feat
+setup-reg.sh --std_niigz "${meanfmri_niigz}" --feat_dir "${feat_dir}"/GF-oddball.feat
 
 # Copy html to a different location to be a separate output
 echo Copying HTML
 mkdir "${out_dir}"/HTML
-cp -R "${feat_dir}"/GF-WM.feat/*.html "${out_dir}"/HTML
-cp -R "${feat_dir}"/GF-WM.feat/*.png "${out_dir}"/HTML
-cp -R "${feat_dir}"/GF-WM.feat/.files "${out_dir}"/HTML
+cp -R "${feat_dir}"/GF-oddball.feat/*.html "${out_dir}"/HTML
+cp -R "${feat_dir}"/GF-oddball.feat/*.png "${out_dir}"/HTML
+cp -R "${feat_dir}"/GF-oddball.feat/.files "${out_dir}"/HTML

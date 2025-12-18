@@ -29,13 +29,13 @@ set fmri(featwatcher_yn) 0
 set fmri(sscleanup_yn) 0
 
 # Output directory
-set fmri(outputdir) "SUBJDIR/GF-WM"
+set fmri(outputdir) "SUBJDIR/GF-oddball"
 
 # TR(s)
 set fmri(tr) 1.300001
 
 # Total volumes
-set fmri(npts) 224
+set fmri(npts) 220
 
 # Delete volumes
 set fmri(ndelete) 0
@@ -152,8 +152,8 @@ set fmri(mixed_yn) 2
 set fmri(randomisePermutations) 5000
 
 # Number of EVs
-set fmri(evs_orig) 8
-set fmri(evs_real) 8
+set fmri(evs_orig) 2
+set fmri(evs_real) 2
 set fmri(evs_vox) 0
 
 # Number of F-tests
@@ -276,13 +276,13 @@ set fmri(confoundevs) 1
 # Confound EVs text file for analysis 1
 set confoundev_files(1) "SUBJDIR/confounds.tsv"
 
-set fmri(evtitle1) "0-Back_Body"
+set fmri(evtitle1) "Standard"
 set fmri(shape1) 3
 set fmri(convolve1) 2
 set fmri(convolve_phase1) 0
 set fmri(tempfilt_yn1) 1
 set fmri(deriv_yn1) 0
-set fmri(custom1) "SUBJDIR/events_0-Back_Body.tsv"
+set fmri(custom1) "SUBJDIR/events_Standard.tsv"
 set fmri(gammasigma1) 3
 set fmri(gammadelay1) 6
 set fmri(ortho1.0) 0
@@ -295,13 +295,13 @@ set fmri(ortho1.6) 0
 set fmri(ortho1.7) 0
 set fmri(ortho1.8) 0
 
-set fmri(evtitle2) "0-Back_Face"
+set fmri(evtitle2) "Deviant"
 set fmri(shape2) 3
 set fmri(convolve2) 2
 set fmri(convolve_phase2) 0
 set fmri(tempfilt_yn2) 1
 set fmri(deriv_yn2) 0
-set fmri(custom2) "SUBJDIR/events_0-Back_Face.tsv"
+set fmri(custom2) "SUBJDIR/events_Deviant.tsv"
 set fmri(gammasigma2) 3
 set fmri(gammadelay2) 6
 set fmri(ortho2.0) 0
@@ -314,121 +314,6 @@ set fmri(ortho2.6) 0
 set fmri(ortho2.7) 0
 set fmri(ortho2.8) 0
 
-set fmri(evtitle3) "0-Back_Place"
-set fmri(shape3) 3
-set fmri(convolve3) 2
-set fmri(convolve_phase3) 0
-set fmri(tempfilt_yn3) 1
-set fmri(deriv_yn3) 0
-set fmri(custom3) "SUBJDIR/events_0-Back_Place.tsv"
-set fmri(gammasigma3) 3
-set fmri(gammadelay3) 6
-set fmri(ortho3.0) 0
-set fmri(ortho3.1) 0
-set fmri(ortho3.2) 0
-set fmri(ortho3.3) 0
-set fmri(ortho3.4) 0
-set fmri(ortho3.5) 0
-set fmri(ortho3.6) 0
-set fmri(ortho3.7) 0
-set fmri(ortho3.8) 0
-
-set fmri(evtitle4) "0-Back_Tools"
-set fmri(shape4) 3
-set fmri(convolve4) 2
-set fmri(convolve_phase4) 0
-set fmri(tempfilt_yn4) 1
-set fmri(deriv_yn4) 0
-set fmri(custom4) "SUBJDIR/events_0-Back_Tools.tsv"
-set fmri(gammasigma4) 3
-set fmri(gammadelay4) 6
-set fmri(ortho4.0) 0
-set fmri(ortho4.1) 0
-set fmri(ortho4.2) 0
-set fmri(ortho4.3) 0
-set fmri(ortho4.4) 0
-set fmri(ortho4.5) 0
-set fmri(ortho4.6) 0
-set fmri(ortho4.7) 0
-set fmri(ortho4.8) 0
-
-set fmri(evtitle5) "2-Back_Body"
-set fmri(shape5) 3
-set fmri(convolve5) 2
-set fmri(convolve_phase5) 0
-set fmri(tempfilt_yn5) 1
-set fmri(deriv_yn5) 0
-set fmri(custom5) "SUBJDIR/events_2-Back_Body.tsv"
-set fmri(gammasigma5) 3
-set fmri(gammadelay5) 6
-set fmri(ortho5.0) 0
-set fmri(ortho5.1) 0
-set fmri(ortho5.2) 0
-set fmri(ortho5.3) 0
-set fmri(ortho5.4) 0
-set fmri(ortho5.5) 0
-set fmri(ortho5.6) 0
-set fmri(ortho5.7) 0
-set fmri(ortho5.8) 0
-
-set fmri(evtitle6) "2-Back_Face"
-set fmri(shape6) 3
-set fmri(convolve6) 2
-set fmri(convolve_phase6) 0
-set fmri(tempfilt_yn6) 1
-set fmri(deriv_yn6) 0
-set fmri(custom6) "SUBJDIR/events_2-Back_Face.tsv"
-set fmri(gammasigma6) 3
-set fmri(gammadelay6) 6
-set fmri(ortho6.0) 0
-set fmri(ortho6.1) 0
-set fmri(ortho6.2) 0
-set fmri(ortho6.3) 0
-set fmri(ortho6.4) 0
-set fmri(ortho6.5) 0
-set fmri(ortho6.6) 0
-set fmri(ortho6.7) 0
-set fmri(ortho6.8) 0
-
-set fmri(evtitle7) "2-Back_Place"
-set fmri(shape7) 3
-set fmri(convolve7) 2
-set fmri(convolve_phase7) 0
-set fmri(tempfilt_yn7) 1
-set fmri(deriv_yn7) 0
-set fmri(custom7) "SUBJDIR/events_2-Back_Place.tsv"
-set fmri(gammasigma7) 3
-set fmri(gammadelay7) 6
-set fmri(ortho7.0) 0
-set fmri(ortho7.1) 0
-set fmri(ortho7.2) 0
-set fmri(ortho7.3) 0
-set fmri(ortho7.4) 0
-set fmri(ortho7.5) 0
-set fmri(ortho7.6) 0
-set fmri(ortho7.7) 0
-set fmri(ortho7.8) 0
-
-set fmri(evtitle8) "2-Back_Tools"
-set fmri(shape8) 3
-set fmri(convolve8) 2
-set fmri(convolve_phase8) 0
-set fmri(tempfilt_yn8) 1
-set fmri(deriv_yn8) 0
-set fmri(custom8) "SUBJDIR/events_2-Back_Tools.tsv"
-set fmri(gammasigma8) 3
-set fmri(gammadelay8) 6
-set fmri(ortho8.0) 0
-set fmri(ortho8.1) 0
-set fmri(ortho8.2) 0
-set fmri(ortho8.3) 0
-set fmri(ortho8.4) 0
-set fmri(ortho8.5) 0
-set fmri(ortho8.6) 0
-set fmri(ortho8.7) 0
-set fmri(ortho8.8) 0
-
-
 # Contrast & F-tests mode
 # real : control real EVs
 # orig : control original EVs
@@ -437,156 +322,15 @@ set fmri(con_mode) orig
 
 # Number of contrasts
 set fmri(ncon_orig) 0
-set fmri(ncon_real) 13
+set fmri(ncon_real) 1
 
-# 1     2     3      4      5     6     7      8
-# 0body 0face 0place 0tools 2body 2face 2place 2tools
+# 1         2
+# Standard  Deviant
 
 set fmri(conpic_real.1) 1
-set fmri(conname_real.1) "2back gt 0back"
-set fmri(con_real1.1) -.25
-set fmri(con_real1.2) -.25
-set fmri(con_real1.3) -.25
-set fmri(con_real1.4) -.25
-set fmri(con_real1.5) 0.25
-set fmri(con_real1.6) 0.25
-set fmri(con_real1.7) 0.25
-set fmri(con_real1.8) 0.25
-
-set fmri(conpic_real.2) 1
-set fmri(conname_real.2) "Body 2gt0"
-set fmri(con_real2.1) -1
-set fmri(con_real2.2)  0
-set fmri(con_real2.3)  0
-set fmri(con_real2.4)  0
-set fmri(con_real2.5)  1
-set fmri(con_real2.6)  0
-set fmri(con_real2.7)  0
-set fmri(con_real2.8)  0
-
-set fmri(conpic_real.3) 1
-set fmri(conname_real.3) "Face 2gt0"
-set fmri(con_real3.1)  0
-set fmri(con_real3.2) -1
-set fmri(con_real3.3)  0
-set fmri(con_real3.4)  0
-set fmri(con_real3.5)  0
-set fmri(con_real3.6)  1
-set fmri(con_real3.7)  0
-set fmri(con_real3.8)  0
-
-set fmri(conpic_real.4) 1
-set fmri(conname_real.4) "Place 2gt0"
-set fmri(con_real4.1)  0
-set fmri(con_real4.2)  0
-set fmri(con_real4.3) -1
-set fmri(con_real4.4)  0
-set fmri(con_real4.5)  0
-set fmri(con_real4.6)  0
-set fmri(con_real4.7)  1
-set fmri(con_real4.8)  0
-
-set fmri(conpic_real.5) 1
-set fmri(conname_real.5) "Tools 2gt0"
-set fmri(con_real5.1)  0
-set fmri(con_real5.2)  0
-set fmri(con_real5.3)  0
-set fmri(con_real5.4) -1
-set fmri(con_real5.5)  0
-set fmri(con_real5.6)  0
-set fmri(con_real5.7)  0
-set fmri(con_real5.8)  1
-
-set fmri(conpic_real.6) 1
-set fmri(conname_real.6) "Body gt Baseline"
-set fmri(con_real6.1)  0.5
-set fmri(con_real6.2)  0
-set fmri(con_real6.3)  0
-set fmri(con_real6.4)  0
-set fmri(con_real6.5)  0.5
-set fmri(con_real6.6)  0
-set fmri(con_real6.7)  0
-set fmri(con_real6.8)  0
-
-set fmri(conpic_real.7) 1
-set fmri(conname_real.7) "Face gt Baseline"
-set fmri(con_real7.1)  0
-set fmri(con_real7.2)  0.5
-set fmri(con_real7.3)  0
-set fmri(con_real7.4)  0
-set fmri(con_real7.5)  0
-set fmri(con_real7.6)  0.5
-set fmri(con_real7.7)  0
-set fmri(con_real7.8)  0
-
-set fmri(conpic_real.8) 1
-set fmri(conname_real.8) "Place gt Baseline"
-set fmri(con_real8.1)  0
-set fmri(con_real8.2)  0
-set fmri(con_real8.3)  0.5
-set fmri(con_real8.4)  0
-set fmri(con_real8.5)  0
-set fmri(con_real8.6)  0
-set fmri(con_real8.7)  0.5
-set fmri(con_real8.8)  0
-
-set fmri(conpic_real.9) 1
-set fmri(conname_real.9) "Tools gt Baseline"
-set fmri(con_real9.1)  0
-set fmri(con_real9.2)  0
-set fmri(con_real9.3)  0
-set fmri(con_real9.4)  0.5
-set fmri(con_real9.5)  0
-set fmri(con_real9.6)  0
-set fmri(con_real9.7)  0
-set fmri(con_real9.8)  0.5
-
-set fmri(conpic_real.10) 1
-set fmri(conname_real.10) "Body gt (Face+Place+Tools)"
-set fmri(con_real10.1)  0.5
-set fmri(con_real10.2)  -0.166666666666667
-set fmri(con_real10.3)  -0.166666666666667
-set fmri(con_real10.4)  -0.166666666666667
-set fmri(con_real10.5)  0.5
-set fmri(con_real10.6)  -0.166666666666667
-set fmri(con_real10.7)  -0.166666666666667
-set fmri(con_real10.8)  -0.166666666666667
-
-set fmri(conpic_real.11) 1
-set fmri(conname_real.11) "Face gt (Body+Place+Tools)"
-set fmri(con_real11.1)  -0.166666666666667
-set fmri(con_real11.2)  0.5
-set fmri(con_real11.3)  -0.166666666666667
-set fmri(con_real11.4)  -0.166666666666667
-set fmri(con_real11.5)  -0.166666666666667
-set fmri(con_real11.6)  0.5
-set fmri(con_real11.7)  -0.166666666666667
-set fmri(con_real11.8)  -0.166666666666667
-
-set fmri(conpic_real.12) 1
-set fmri(conname_real.12) "Place gt (Body+Face+Tools)"
-set fmri(con_real12.1)  -0.166666666666667
-set fmri(con_real12.2)  -0.166666666666667
-set fmri(con_real12.3)  0.5
-set fmri(con_real12.4)  -0.166666666666667
-set fmri(con_real12.5)  -0.166666666666667
-set fmri(con_real12.6)  -0.166666666666667
-set fmri(con_real12.7)  0.5
-set fmri(con_real12.8)  -0.166666666666667
-
-set fmri(conpic_real.13) 1
-set fmri(conname_real.13) "Tools gt (Body+Face+Place)"
-set fmri(con_real13.1)  -0.166666666666667
-set fmri(con_real13.2)  -0.166666666666667
-set fmri(con_real13.3)  -0.166666666666667
-set fmri(con_real13.4)  0.5
-set fmri(con_real13.5)  -0.166666666666667
-set fmri(con_real13.6)  -0.166666666666667
-set fmri(con_real13.7)  -0.166666666666667
-set fmri(con_real13.8)  0.5
-
-# 1     2     3      4      5     6     7      8
-# 0body 0face 0place 0tools 2body 2face 2place 2tools
+set fmri(conname_real.1) "Deviant gt Standard"
+set fmri(con_real1.1) -1
+set fmri(con_real1.2)  1
 
 
 # Contrast masking - use >0 instead of thresholding?
