@@ -23,7 +23,7 @@ src_dir=$(dirname "${BASH_SOURCE[0]}")
 sed -e "s:ODDBALL1DIR:${oddball1feat_dir}:g" "${src_dir}"/design-template-GF-oddball-session-higherlevel.fsf \
     > "${out_dir}"/design.fsf
 sed -i -e "s:ODDBALL2DIR:${oddball2feat_dir}:g" "${out_dir}"/design.fsf
-sed -i -e "s:OUTDIR:${out_dir}/GF-Oddball-12:g" "${out_dir}"/design.fsf
+sed -i -e "s:OUTDIR:${out_dir}/GF-oddball-12:g" "${out_dir}"/design.fsf
 
 # Run
 echo Running FEAT

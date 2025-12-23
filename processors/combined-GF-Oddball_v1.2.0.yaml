@@ -1,0 +1,48 @@
+# https://github.com/baxpr/feat-task-fmri
+---
+procyamlversion: 3.0.0-dev.0
+containers:
+  - name: fsl
+    path: fsl-base_v6.0.7.18.sif
+    source: docker://baxterprogers/fsl-base:v6.0.7.18
+requirements:
+  walltime: 0-4
+  memory: 8G
+jobtemplate: job_template_v3.txt
+
+
+inputs:
+
+  xnat:
+
+    assessors:
+      - name: assr_fmri1
+        proctypes: fmri-GF-oddball1_v1
+        resources:
+          - {resource: FEAT, ftype: DIR, fdest: feat_oddball1}
+      - name: assr_fmri2
+        proctypes: fmri-GF-oddball2_v1
+        resources:
+          - {resource: FEAT, ftype: DIR, fdest: feat_oddball2}
+
+
+outputs:
+  - {path: GF-oddball-12.gfeat, type: DIR, resource: FEAT}
+  - {path: feat-task-fmri/src, type: DIR, resource: SCRIPTS}
+
+
+command:
+  type: singularity_exec
+  container: fsl
+  args: >-
+    bash -c '
+    cd /OUTPUTS &&
+    wget -O feat-task-fmri.tar.gz https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.2.0.tar.gz &&
+    tar -zxf feat-task-fmri.tar.gz &&
+    mv feat-task-fmri-* feat-task-fmri &&
+    export PATH=/OUTPUTS/feat-task-fmri/src:\$PATH &&
+    pipeline-GF-oddball-session-higherlevel.sh
+      --oddball1feat_dir /INPUTS/feat_oddball1/FEAT
+      --oddball2feat_dir /INPUTS/feat_oddball2/FEAT
+      --out_dir /OUTPUTS
+    '
