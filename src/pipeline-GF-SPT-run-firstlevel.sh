@@ -25,13 +25,13 @@ fmri_niigz=$(find_fmriprep.py --fmriprep_dir ${fmriprep_dir} --output fmri)
 mask_niigz=$(find_fmriprep.py --fmriprep_dir ${fmriprep_dir} --output mask)
 confounds_tsv=$(find_fmriprep.py --fmriprep_dir ${fmriprep_dir} --output confounds)
 
-# Convert eprime .txt log to csv format
-echo Converting eprime log
-eprime_to_csv.py -o "${out_dir}"/eprime.csv "${eprime_txt}"
+# Convert eprime .txt log to csv format [Don't, because SPT uses hard coded timings]
+#echo Converting eprime log
+#eprime_to_csv.py -o "${out_dir}"/eprime.csv "${eprime_txt}"
 
 # Convert fmri timings to FEAT format
-echo Parsing eprime timings
-parse-edat-GF-oddball.py --eprime_csv "${out_dir}"/eprime.csv --feat_dir "${feat_dir}"
+#echo Parsing eprime timings
+#parse-edat-GF-SPT.py --eprime_csv "${out_dir}"/eprime.csv --feat_dir "${feat_dir}"
 
 # Extract desired confounds from confounds file
 echo Extracting confounds
@@ -46,8 +46,11 @@ cp "${mask_niigz}" "${feat_dir}"/mask.nii.gz
 # is in the same dir as this script
 echo Creating design file
 src_dir=$(dirname "${BASH_SOURCE[0]}")
-sed -e "s:SUBJDIR:${feat_dir}:g" "${src_dir}"/design-template-GF-oddball-run-firstlevel.fsf \
+sed -e "s:SUBJDIR:${feat_dir}:g" "${src_dir}"/design-template-GF-SPT-run-firstlevel.fsf \
     > "${feat_dir}"/design.fsf
+
+# Copy events files
+cp "${src_dir}"/events_SPT-{Scene,Scramble}.tsv "${feat_dir}"
 
 # Verify that TR, nvols in design file match the fmri nifti
 echo Checking design file params
@@ -60,11 +63,11 @@ feat design.fsf
 
 # Set up regdir ahead of higher level analysis
 echo Setting up stdreg
-setup-reg.sh --std_niigz "${meanfmri_niigz}" --feat_dir "${feat_dir}"/GF-oddball.feat
+setup-reg.sh --std_niigz "${meanfmri_niigz}" --feat_dir "${feat_dir}"/GF-SPT.feat
 
 # Copy html to a different location to be a separate output
 echo Copying HTML
 mkdir "${out_dir}"/HTML
-cp -R "${feat_dir}"/GF-oddball.feat/*.html "${out_dir}"/HTML
-cp -R "${feat_dir}"/GF-oddball.feat/*.png "${out_dir}"/HTML
-cp -R "${feat_dir}"/GF-oddball.feat/.files "${out_dir}"/HTML
+cp -R "${feat_dir}"/GF-SPT.feat/*.html "${out_dir}"/HTML
+cp -R "${feat_dir}"/GF-SPT.feat/*.png "${out_dir}"/HTML
+cp -R "${feat_dir}"/GF-SPT.feat/.files "${out_dir}"/HTML
