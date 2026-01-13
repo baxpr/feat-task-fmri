@@ -8,6 +8,7 @@
 while [[ $# -gt 0 ]]; do
     key="$1"
     case $key in      
+        --eprime_txt)         export eprime_txt="$2";       shift; shift ;;
         --fmriprep_dir)       export fmriprep_dir="$2";     shift; shift ;;
         --out_dir)            export out_dir="$2";          shift; shift ;;
         *) echo "Input ${1} not recognized"; shift ;;
