@@ -152,8 +152,8 @@ set fmri(mixed_yn) 2
 set fmri(randomisePermutations) 5000
 
 # Number of EVs
-set fmri(evs_orig) 2
-set fmri(evs_real) 2
+set fmri(evs_orig) 3
+set fmri(evs_real) 3
 set fmri(evs_vox) 0
 
 # Number of F-tests
@@ -282,12 +282,13 @@ set fmri(convolve1) 2
 set fmri(convolve_phase1) 0
 set fmri(tempfilt_yn1) 1
 set fmri(deriv_yn1) 0
-set fmri(custom1) "SUBJDIR/events_SPT-Scene.tsv"
+set fmri(custom1) "SUBJDIR/events_Scene.tsv"
 set fmri(gammasigma1) 3
 set fmri(gammadelay1) 6
 set fmri(ortho1.0) 0
 set fmri(ortho1.1) 0
 set fmri(ortho1.2) 0
+set fmri(ortho1.3) 0
 
 set fmri(evtitle2) "Scramble"
 set fmri(shape2) 3
@@ -295,12 +296,27 @@ set fmri(convolve2) 2
 set fmri(convolve_phase2) 0
 set fmri(tempfilt_yn2) 1
 set fmri(deriv_yn2) 0
-set fmri(custom2) "SUBJDIR/events_SPT-Scramble.tsv"
+set fmri(custom2) "SUBJDIR/events_Scramble.tsv"
 set fmri(gammasigma2) 3
 set fmri(gammadelay2) 6
 set fmri(ortho2.0) 0
 set fmri(ortho2.1) 0
 set fmri(ortho2.2) 0
+set fmri(ortho2.3) 0
+
+set fmri(evtitle3) "Response"
+set fmri(shape3) 3
+set fmri(convolve3) 2
+set fmri(convolve_phase3) 0
+set fmri(tempfilt_yn3) 1
+set fmri(deriv_yn3) 0
+set fmri(custom3) "SUBJDIR/events_Response.tsv"
+set fmri(gammasigma3) 3
+set fmri(gammadelay3) 6
+set fmri(ortho3.0) 0
+set fmri(ortho3.1) 0
+set fmri(ortho3.2) 0
+set fmri(ortho3.3) 0
 
 
 # Contrast & F-tests mode
@@ -311,10 +327,10 @@ set fmri(con_mode) orig
 
 # Number of contrasts
 set fmri(ncon_orig) 0
-set fmri(ncon_real) 3
+set fmri(ncon_real) 4
 
-# 1     2
-# Scene Scramble
+# 1     2        3
+# Scene Scramble Response
 
 set fmri(conpic_real.1) 1
 set fmri(conname_real.1) "Scene"
@@ -330,6 +346,11 @@ set fmri(conpic_real.3) 1
 set fmri(conname_real.3) "Scene gt Scramble"
 set fmri(con_real3.1)  1
 set fmri(con_real3.2) -1
+
+set fmri(conpic_real.4) 1
+set fmri(conname_real.4) "Response"
+set fmri(con_real4.1) 1
+set fmri(con_real4.2) 0
 
 
 # Contrast masking - use >0 instead of thresholding?
