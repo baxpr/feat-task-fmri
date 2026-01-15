@@ -22,9 +22,9 @@ inputs:
     scans:
       - name: scan_fmri
         types: spt1*
+        skip_unusable: True
         resources:
           - {resource: EPRIME_TXT, fmatch: '*.txt', fdest: eprime.txt}
-         skip_unusable: True
 
     assessors:
       - name: assr_fmriprep
