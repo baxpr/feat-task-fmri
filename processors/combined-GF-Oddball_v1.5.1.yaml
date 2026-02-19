@@ -37,7 +37,7 @@ command:
   args: >-
     bash -c '
     cd /OUTPUTS &&
-    wget -O feat-task-fmri.tar.gz https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.2.0.tar.gz &&
+    wget -O feat-task-fmri.tar.gz https://github.com/baxpr/feat-task-fmri/archive/refs/tags/v1.5.1.tar.gz &&
     tar -zxf feat-task-fmri.tar.gz &&
     mv feat-task-fmri-* feat-task-fmri &&
     export PATH=/OUTPUTS/feat-task-fmri/src:\$PATH &&
